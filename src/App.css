@@ -1,33 +1,92 @@
-.App {
+/*
+Colours:
+Purple: color: rgb(110, 70, 110);
+Yellow: rgb(229, 199, 71)
+Tan: tan
+Orange: orange
+Lightblue: lightblue
+*/
+
+body {
+  font-family: 'ZCOOL QingKe HuangYou', cursive;
   text-align: center;
+  background-color: black;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  /* color: rgb(107, 52, 107); */
+  color: rgb(229, 199, 71);
+  text-transform: uppercase;
+  margin-top: 10px;
+  margin-bottom: 0px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.button {
+  width: 100%;
+}
+
+.md-button {
+  display: inline-block;
+  min-width: 10%;
+  min-height: 20px;
+  background-color: lightcoral;
   color: white;
+  margin: auto;
+  margin-top: 10px;
+  padding: 10px;
+  font-size: 18px;
 }
 
-.App-link {
-  color: #61dafb;
+.md-button:hover {
+  cursor: pointer;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.md-button-cap-right {
+  display: inline-block;
+  min-width: 1.5%;
+  min-height: 20px;
+  background-color: lightcoral;
+  color: lightcoral;
+  margin: auto;
+  margin-top: 10px;
+  margin-left: 2px;
+  padding: 10px;
+  font-size: 18px;
+  border-radius: 0px 30px 30px 0px;
+}
+
+.md-button-cap-right:hover {
+  cursor: pointer;
+}
+
+.md-button-cap-left {
+  display: inline-block;
+  min-width: 1.5%;
+  min-height: 20px;
+  background-color: lightcoral;
+  color: lightcoral;
+  margin: auto;
+  margin-top: 10px;
+  margin-right: 2px;
+  padding: 10px;
+  font-size: 18px;
+  border-radius: 30px 0px 0px 30px;
+}
+
+.md-button-cap-left:hover {
+  cursor: pointer;
+}
+
+.heading {
+  color: rgb(110, 70, 110);
+  font-size: 60px;
+}
+
+.headingNum {
+  display: inline-block;
 }
