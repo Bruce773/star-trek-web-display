@@ -3,8 +3,10 @@ import React from 'react';
 const Button = (props) => {
   var onClickHandler = () => {
     // console.log(this);
-    if (props.clickHandler) {
+    if (props.clickHandler && props.headingVal) {
       props.clickHandler(props.headingVal);
+    } else if (props.clickHandler && !props.headingVal) {
+      props.clickHandler();
     }
   };
 

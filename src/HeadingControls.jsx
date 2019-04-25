@@ -3,7 +3,7 @@ import Button from './Button.jsx';
 
 const HeadingControls = (props) => (
   <div>
-    <h3>Heading Controls</h3>
+    <h3 className="heading-controls-title">Heading Controls</h3>
     <div className={'row'}>
       <div className={'col-sm-6'}>
         <Button

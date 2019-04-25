@@ -8,7 +8,7 @@ Lightblue: lightblue
 */
 
 body {
-  font-family: 'ZCOOL QingKe HuangYou', cursive;
+  /* font-family: 'ZCOOL QingKe HuangYou', cursive; */
   text-align: center;
   background-color: black;
 }
@@ -89,4 +89,130 @@ h6 {
 
 .headingNum {
   display: inline-block;
+}
+
+.top-right-title-cap {
+  background-color: rgb(229, 199, 71);
+  width: 20%;
+  height: 40px;
+  display: inline-block;
+  border-radius: 0px 10px 10px 0px;
+  margin-left: 10px;
+  margin-right: 5px;
+  margin-top: 5px;
+  text-align: right;
+}
+
+.top-left-title-cap {
+  background-color: rgb(229, 199, 71);
+  width: 66%;
+  height: 40px;
+  display: inline-block;
+  border-radius: 50px 0px 0px 0px;
+  margin-left: 10px;
+  margin-right: 5px;
+  margin-top: 5px;
+  text-align: left;
+}
+
+.page-title-header {
+  align-items: center;
+  margin-bottom: -8px;
+}
+
+.header-to-body-connector {
+  background-color: rgb(229, 199, 71);
+  width: 50%;
+  height: 40px;
+  display: inline-block;
+  margin-left: 15px;
+  margin-right: 5px;
+  margin-top: 0px;
+  text-align: left;
+}
+
+/* When the console is open */
+@media (min-width: 1000px) {
+  .top-right-title-cap {
+    width: 5%;
+    display: inline-block;
+  }
+  .top-left-title-cap {
+    width: 65%;
+    display: inline-block;
+  }
+  .page-title {
+    font-size: 24px;
+    align-items: center;
+  }
+  .page-title-container {
+    margin-bottom: 0px;
+    display: inline-block;
+    align-items: center;
+  }
+  .header-to-body-connector {
+    /* margin-left: 42px; */
+    margin-left: 52.5%;
+    width: 90px;
+    height: 70px;
+    top: 0px;
+  }
+  .heading-controls-title {
+    font-size: 1.45rem;
+  }
+  .md-button-cap-left {
+    font-size: 12px;
+  }
+  .md-button-cap-right {
+    font-size: 12px;
+  }
+  .md-button {
+    font-size: 12px;
+  }
+  .column {
+    padding: 0px;
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 1200px) {
+  .top-right-title-cap {
+    width: 5%;
+    display: inline-block;
+  }
+  .top-left-title-cap {
+    width: 75%;
+    display: inline-block;
+  }
+  .page-title {
+    font-size: 24px;
+    align-items: center;
+  }
+  .page-title-container {
+    margin-bottom: 0px;
+    display: inline-block;
+    align-items: center;
+  }
+  .header-to-body-connector {
+    /* margin-left: 42px; */
+    margin-left: 37%;
+    width: 80px;
+    height: 70px;
+    top: 0px;
+  }
+  .heading-controls-title {
+    font-size: 1.45rem;
+  }
+  .md-button-cap-left {
+    font-size: 12px;
+  }
+  .md-button-cap-right {
+    font-size: 12px;
+  }
+  .md-button {
+    font-size: 12px;
+  }
+  .column {
+    padding: 0px;
+  }
 }

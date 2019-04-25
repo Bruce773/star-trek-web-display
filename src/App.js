@@ -13,7 +13,10 @@ class App extends Component {
       heading1: 0,
       heading2: 0,
       heading3: 0,
+      temp: 0,
     };
+
+    this.getTemperature = this.getTemperature.bind(this);
   }
 
   increaseHeading(heading) {
@@ -38,43 +41,43 @@ class App extends Component {
     }));
   }
 
+  getTemperature() {
+    let celTemp = E.getTemperature();
+    let normalTemp = Math.round(celTemp * 1.8 + 32);
+    return normalTemp;
+  }
+
   render() {
     return (
       <div className="App">
-        <div>
-          <div
-            style={{
-              backgroundColor: 'rgb(229, 199, 71)',
-              width: '50%',
-              height: '40px',
-              display: 'inline-block',
-              borderRadius: '50px 0px 0px 0px',
-              marginLeft: '10px',
-              marginRight: '5px',
-              marginTop: '5px',
-              textAlign: 'left',
-            }}
-          />
-          <h1 style={{ display: 'inline' }}>LCARS Web Interface</h1>
-          <div
-            style={{
-              backgroundColor: 'rgb(229, 199, 71)',
-              width: '25%',
-              height: '40px',
-              display: 'inline-block',
-              borderRadius: '0px 10px 10px 0px',
-              marginLeft: '10px',
-              marginRight: '5px',
-              marginTop: '5px',
-              textAlign: 'right',
-            }}
-          />
+        <div className="page-title-header">
+          <div className="top-left-title-cap" />
+          <div className="page-title-container">
+            <h1 style={{ display: 'inline' }} className="page-title">
+              LCARS Web Interface
+            </h1>
+          </div>
+          <div className="top-right-title-cap" />
         </div>
-        <div className="row">
-          <div className="col-md-4">
+        <div className="row" style={{ marginTop: '5px' }}>
+          <div
+            style={{ paddingLeft: '0px', width: '20px', marginTop: '0px' }}
+            className="col-md-1"
+          >
+            <div className="header-to-body-connector" />
+          </div>
+          {/* First row */}
+          <div className="col-md-4 column">
             <Button type={'md'} buttonContent={'4586'} color={'orange'} />
             <Button type={'md'} buttonContent={'458263'} color={'tan'} />
             <Button type={'md'} buttonContent={'7552831'} color={'orange'} />
+            <h2>Temperature Readings: {this.state.temp}</h2>
+            <Button
+              type={'md'}
+              buttonContent={'Temperature'}
+              color={'orange'}
+              clickHandler={this.getTemperature}
+            />
             <div style={{ width: '50%', margin: 'auto' }}>
               <HeadingControls
                 increaseHeading={this.increaseHeading.bind(this)}
@@ -89,14 +92,33 @@ class App extends Component {
               clickHandler={this.resetHeading.bind(this)}
             />
           </div>
-          <div className="col-md-4">
+          {/* Second row */}
+          <div className="col-md-3 column">
             <h2>Heading:</h2>
             <HeadingDisplay state={this.state} />
-            <Button type={'md'} buttonContent={'4586'} color={'orange'} />
-            <Button type={'md'} buttonContent={'458263'} color={'tan'} />
-            <Button type={'md'} buttonContent={'7552831'} color={'orange'} />
+            <div className="row" style={{ width: '80%', margin: 'auto' }}>
+              <div className="col-sm-6">
+                <Button type={'md'} buttonContent={'4586'} color={'orange'} />
+                <Button type={'md'} buttonContent={'458263'} color={'tan'} />
+                <Button
+                  type={'md'}
+                  buttonContent={'7552831'}
+                  color={'orange'}
+                />
+              </div>
+              <div className="col-sm-6">
+                <Button type={'md'} buttonContent={'4586'} color={'orange'} />
+                <Button type={'md'} buttonContent={'458263'} color={'tan'} />
+                <Button
+                  type={'md'}
+                  buttonContent={'7552831'}
+                  color={'orange'}
+                />
+              </div>
+            </div>
           </div>
-          <div className="col-md-4">
+          {/* Third row */}
+          <div className="col-md-3 column">
             <Button
               type={'md'}
               buttonContent={'Engage Warp Speed'}
@@ -109,6 +131,26 @@ class App extends Component {
               color={'tan'}
               fontColor={'black'}
             />
+            <div className="row" style={{ width: '80%', margin: 'auto' }}>
+              <div className="col-sm-6">
+                <Button type={'md'} buttonContent={'4586'} color={'orange'} />
+                <Button type={'md'} buttonContent={'458263'} color={'tan'} />
+                <Button
+                  type={'md'}
+                  buttonContent={'7552831'}
+                  color={'orange'}
+                />
+              </div>
+              <div className="col-sm-6">
+                <Button type={'md'} buttonContent={'4586'} color={'orange'} />
+                <Button type={'md'} buttonContent={'458263'} color={'tan'} />
+                <Button
+                  type={'md'}
+                  buttonContent={'7552831'}
+                  color={'orange'}
+                />
+              </div>
+            </div>
           </div>
         </div>
       </div>
